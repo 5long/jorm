@@ -14,11 +14,15 @@ module Jorm
     end
 
     def should_normalize?
-      is_folder? && can_normalize?
+      is_folder? && can_normalize? && !already_normalized?
     end
 
     def is_folder?
       path.directory?
+    end
+
+    def already_normalized?
+      Jorm.already_normalized? path.to_s
     end
 
     def normalize!

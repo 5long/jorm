@@ -22,4 +22,8 @@ module Jorm
       Folder.new(f).normalize!
     end
   end
+
+  def self.already_normalized? input_jav_id
+    !!(input_jav_id.match PATTERN_NORMALIZED)
+  end
 end

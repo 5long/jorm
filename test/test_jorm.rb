@@ -25,4 +25,10 @@ describe Jorm do
       assert_can_normazlie 'ebod-096'
     end
   end
+
+  describe ".already_normalized?" do
+    it "determines if a jav id is already normalized" do
+      assert Jorm.already_normalized? 'ebod096'
+    end
+  end
 end
