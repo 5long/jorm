@@ -10,8 +10,8 @@ describe Jorm do
     end
   end
 
-  def assert_normazlied input
-    fail "#{input} is not normalized" unless Jorm.normalized? input
+  def assert_can_normazlie input
+    fail "#{input} can not normalized" unless Jorm.can_normalize? input
   end
 
   describe ".normalize_id" do
@@ -20,14 +20,9 @@ describe Jorm do
     end
   end
 
-  describe ".normalized?" do
-    it "determines if a jav id is already normalized" do
-      assert_normazlied 'ebod096'
-    end
-
-    it "takes untrimmed jav id as unnormalized" do
-      refute Jorm.normalized?("pgd438\n")
-      refute Jorm.normalized?(" pgd438")
+  describe ".can_normalize?" do
+    it "determines if a jav id can be normalized" do
+      assert_can_normazlie 'ebod-096'
     end
   end
 end

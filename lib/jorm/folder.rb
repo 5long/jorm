@@ -9,12 +9,20 @@ module Jorm
       @path = ::Pathname.new path
     end
 
-    def normalized?
-      Jorm.normalized? path.to_s
+    def can_normalize?
+      Jorm.can_normalize? path.to_s
+    end
+
+    def should_normalize?
+      is_folder? && can_normalize?
+    end
+
+    def is_folder?
+      path.directory?
     end
 
     def normalize!
-      return if normalized?
+      return unless should_normalize?
       FileUtils.mv path, Jorm.normalize_id(path.to_s)
     end
   end
