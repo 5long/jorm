@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = %w{
     README.md
+    Changelog.md
     LICENSE.txt
     bin/jorm
     lib/jorm.rb
