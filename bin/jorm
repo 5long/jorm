@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require "main"
+
+require "jorm"
+
+Main {
+  argument(:folders) { description "folders to normalize" }
+
+  def run
+    Jorm.normalize_folder params[:folders].value
+  end
+}
