@@ -1,29 +1,18 @@
 # Jorm
 
-TODO: Write a gem description
+Normalizes JAV folder names.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'jorm'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install jorm
 
 ## Usage
 
-TODO: Write usage instructions here
+Running
 
-## Contributing
+    $ jorm javcrapsite-EBOD-277AVIC
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Would rename the folder to `ebod277`, which should be easy to type in
+terminal.
+
+See `jorm -h` for more.

@@ -8,12 +8,19 @@ Gem::Specification.new do |spec|
   spec.version       = Jorm::VERSION
   spec.authors       = ["Whyme Lyu"]
   spec.email         = ["callme5long@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.summary       = %q{Normalize JAV folder name}
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
+  spec.files         = %w{
+    README.md
+    LICENSE.txt
+    bin/jorm
+    lib/jorm.rb
+    lib/jorm/folder.rb
+    lib/jorm/version.rb
+    test/mt_helper.rb
+    test/test_jorm.rb
+  }
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
