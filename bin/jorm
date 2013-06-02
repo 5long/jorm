@@ -5,9 +5,12 @@ require "main"
 require "jorm"
 
 Main {
-  argument(:folders) { description "folders to normalize" }
+  argument :folders do
+    description  "folders to normalize"
+    arity(-2)
+  end
 
   def run
-    Jorm.normalize_folder params[:folders].value
+    Jorm.normalize_folder(*params[:folders].values)
   end
 }
